@@ -22,6 +22,7 @@ import MarketScreen from "../screens/MarketScreen";
 import RankingScreen from "../screens/RankingScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import CoinDetailsScreen from "../screens/CoinDetailsScreen";
+import CoinExchangeScreen from "../screens/CoinExchangeScreen";
 
 export default function Navigation({colorScheme}: { colorScheme: ColorSchemeName }) {
     return (
@@ -42,9 +43,12 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
     return (
         <Stack.Navigator>
+
             <Stack.Screen name="Root" component={BottomTabNavigator} options={{headerShown: false}}/>
             <Stack.Screen name="CoinDetails" component={CoinDetailsScreen}
                           options={{title: 'Price Data', animation: 'slide_from_left'}}/>
+            <Stack.Screen name="CoinExchange" component={CoinExchangeScreen}
+                          options={{title: 'Coin Exchange', animation: 'slide_from_left'}}/>
             {/*<Stack.Group screenOptions={{presentation: 'modal'}}>*/}
             {/*    <Stack.Screen name="Modal" component={ModalScreen}/>*/}
             {/*</Stack.Group>*/}

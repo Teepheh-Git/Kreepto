@@ -4,10 +4,10 @@ import styles from './styles';
 import {AntDesign} from "@expo/vector-icons";
 import PercentageChange from "../../components/PercentageChange";
 import CoinPriceGraph from "../../components/CoinPriceGraph";
+import {useNavigation} from "@react-navigation/native";
 
 
-
-const historyString= JSON.stringify([
+const historyString = JSON.stringify([
     47222.9831719397,
     47434.65047738381,
     47607.369136516856,
@@ -184,19 +184,24 @@ const CoinDetailsScreen = () => {
     const [coin, setCoin] = useState({
 
         image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png',
-        name: 'Boluwatife',
+        name: 'Bitcoin',
         symbol: "BTC",
-        currentPrice: 56,
+        currentPrice: 56459,
         valueChange24H: 0.66,
         valueChange1D: -0.24,
         valueChange7D: 0.94,
+        amount: 2
 
     });
 
-    const onBuy = () => {
+    const navigation = useNavigation();
 
+    const onBuy = () => {
+        navigation.navigate('CoinExchange', {isBuy: true, coin});
     }
     const onSell = () => {
+        navigation.navigate('CoinExchange', {isBuy: false, coin});
+
 
     }
     return (
@@ -238,7 +243,7 @@ const CoinDetailsScreen = () => {
                     </View>
                 </View>
             </View>
-            <CoinPriceGraph  dataString={historyString}/>
+            <CoinPriceGraph dataString={historyString}/>
 
             {/*{coin.priceHistoryString && <CoinPriceGraph dataString={coin.priceHistoryString } />}*/}
 
