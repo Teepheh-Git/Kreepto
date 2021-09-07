@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-kreepto-dev-152917-authRole",
+      "UnauthRoleArn": "arn:aws:iam::144216176388:role/amplify-kreepto-dev-152917-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::144216176388:role/amplify-kreepto-dev-152917-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-kreepto-dev-152917-deployment",
+      "UnauthRoleName": "amplify-kreepto-dev-152917-unauthRole",
+      "StackName": "amplify-kreepto-dev-152917",
+      "StackId": "arn:aws:cloudformation:ca-central-1:144216176388:stack/amplify-kreepto-dev-152917/fef9ab80-0fe7-11ec-bb1b-0adb31e19ea2",
+      "AmplifyAppId": "d3w2fxgrkcfi2t"
+    }
+  }
+}

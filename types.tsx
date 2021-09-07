@@ -17,6 +17,7 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   CoinDetails: undefined;
   CoinExchange: undefined;
+  Welcome: undefined;
   Modal: undefined;
   NotFound: undefined;
 };
